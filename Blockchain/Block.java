@@ -12,6 +12,10 @@ class Block{
 		this.data = data;
 	}
 
+	int getHash(){
+		return Integer.hashCode(Arrays.hashCode(data)+prevHash);
+	}
+
 	@Override
 	public String toString(){
 		return "".join(" ",data);
