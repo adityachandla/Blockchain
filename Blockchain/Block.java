@@ -7,9 +7,11 @@ import java.io.*;
 class Block{
 	int prevHash;
 	String[] data;
+	Block next;
 	Block(int prevHash, String[] data){
 		this.prevHash = prevHash;
 		this.data = data;
+		next = null;
 	}
 
 	int getHash(){
@@ -18,6 +20,6 @@ class Block{
 
 	@Override
 	public String toString(){
-		return "".join(" ",data);
+		return String.format("(%s)","".join(",",data));
 	}
 }
